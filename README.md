@@ -1,4 +1,4 @@
-[![npm][npm-badge]][npm-badge-url]
+[![NPM](https://nodei.co/npm/stencil-props.png?compact=true)](https://npmjs.org/package/stencil-props)
 ## Stencil Props
 
 A component that pass data attributes as props to Stencil apps.
