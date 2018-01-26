@@ -1,10 +1,12 @@
-import { Component, Element } from '@stencil/core';
+import { Component, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'stencil-props'
 })
 export class StencilProps {
   @Element() el: HTMLElement;
+  @Prop() showErrors: boolean = false;
+  @Prop() passInvalid: boolean = false;
 
   componentWillLoad() {
     if (this.el.children.length) {
@@ -14,7 +16,12 @@ export class StencilProps {
         try {
           value = JSON.parse(dataset[key]);
         } catch (error) {
-          value = dataset[key];
+          if (this.showErrors === true) {
+            console.error(`Error parsing data-${key}`, error);
+          }
+          if (this.passInvalid === true) {
+            value = dataset[key];
+          }
         }
         //@ts-ignore
         this.el.children[0][key] = value;

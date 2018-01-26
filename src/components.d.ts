@@ -4,43 +4,6 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import {
-  Obj,
-} from './components/my-app/my-app';
-
-import {
-  MyApp as MyApp
-} from './components/my-app/my-app';
-
-declare global {
-  interface HTMLMyAppElement extends MyApp, HTMLElement {
-  }
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
-  };
-  interface HTMLElementTagNameMap {
-    "my-app": HTMLMyAppElement;
-  }
-  interface ElementTagNameMap {
-    "my-app": HTMLMyAppElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "my-app": JSXElements.MyAppAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
-      arr?: number[];
-      bool?: boolean;
-      num?: number;
-      obj?: Obj;
-      str?: string;
-    }
-  }
-}
-
 
 import {
   StencilProps as StencilProps
@@ -66,8 +29,10 @@ declare global {
   }
   namespace JSXElements {
     export interface StencilPropsAttributes extends HTMLAttributes {
-      
+      passInvalid?: boolean;
+      showErrors?: boolean;
     }
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }
