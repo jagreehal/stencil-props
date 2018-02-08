@@ -16,6 +16,7 @@ passes on data to the my-app component
 
 ```jsx
 import { Component, Prop } from '@stencil/core';
+import 'stencil-props';
 
 export interface Obj {
   foo?: string;
@@ -32,13 +33,13 @@ export class MyApp {
 
   render() {
     return (
-      <div>
+      <stencil-props>
         <div>str - {this.str}</div>
         <div>num - {this.num}</div>
         <div>obj - {this.obj.foo}</div>
         <div>arr - {this.arr[2]}</div>
         <div>boo - {this.bool ? 'true' : 'false'}</div>
-      </div>
+      </stencil-props>
     );
   }
 }
