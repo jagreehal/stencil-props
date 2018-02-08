@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "tag": "stencil-props",
+      "dependencies": [],
+      "componentClass": "StencilProps",
+      "componentPath": "components/stencil-props/stencil-props.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "passInvalid",
+          "type": "Boolean"
+        },
+        {
+          "name": "showErrors",
+          "type": "Boolean"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      }
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.6.0",
+    "typescriptVersion": "2.7.2"
+  }
+}
