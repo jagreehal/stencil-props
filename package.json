@@ -1,6 +1,6 @@
 {
   "name": "stencil-props",
-  "version": "1.4.3",
+  "version": "1.6.1",
   "description": "Stencil Props",
   "main": "dist/stencilprops.js",
   "browser": "dist/stencilprops.js",
