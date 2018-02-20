@@ -1,6 +1,6 @@
 {
   "name": "stencil-props",
-  "version": "1.6.1",
+  "version": "1.6.3",
   "description": "Stencil Props",
   "main": "dist/stencilprops.js",
   "browser": "dist/stencilprops.js",
@@ -12,7 +12,6 @@
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "publish": "npm publish --tag next",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
     "test": "jest --no-cache",
@@ -25,7 +24,7 @@
     "url": "git+https://github.com/jagreehal/stencil-props.git"
   },
   "dependencies": {
-    "@stencil/core": "0.6.0"
+    "@stencil/core": "0.6.3"
   },
   "devDependencies": {
     "@stencil/dev-server": "0.0.18",

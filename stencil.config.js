@@ -1,5 +1,8 @@
 exports.config = {
   namespace: 'stencilprops',
   serviceWorker: false,
-  generateDistribution: true
+  generateDistribution: true,
+  bundles: [
+    { components: ['stencil-props'] }
+  ] 
 };
