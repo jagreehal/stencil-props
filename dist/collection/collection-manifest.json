@@ -8,12 +8,18 @@
       "styles": {},
       "props": [
         {
-          "name": "passInvalid",
-          "type": "Boolean"
+          "name": "component",
+          "type": "String",
+          "attr": "component"
+        },
+        {
+          "name": "componentProps",
+          "attr": "component-props"
         },
         {
           "name": "showErrors",
-          "type": "Boolean"
+          "type": "Boolean",
+          "attr": "show-errors"
         }
       ],
       "hostElement": {
@@ -21,9 +27,11 @@
       }
     }
   ],
+  "collections": [],
   "compiler": {
     "name": "@stencil/core",
-    "version": "0.6.3",
-    "typescriptVersion": "2.7.2"
-  }
+    "version": "0.7.10",
+    "typescriptVersion": "2.8.1"
+  },
+  "bundles": []
 }

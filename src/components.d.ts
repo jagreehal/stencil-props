@@ -4,42 +4,52 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
+import '@stencil/core';
 
 declare global {
+  namespace JSX {
+    interface Element {}
+    export interface IntrinsicElements {}
+  }
+  namespace JSXElements {}
+
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
     componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
   }
+
+  interface HTMLAttributes {}
 }
 
 
-
-import {
-  StencilProps as StencilProps
-} from './components/stencil-props/stencil-props';
-
 declare global {
-  interface HTMLStencilPropsElement extends StencilProps, HTMLStencilElement {
+  interface HTMLStencilPropsElement extends HTMLStencilElement {
+    'component': string;
+    'componentProps': { [key: string]: any };
+    'showErrors': boolean;
   }
   var HTMLStencilPropsElement: {
     prototype: HTMLStencilPropsElement;
     new (): HTMLStencilPropsElement;
   };
   interface HTMLElementTagNameMap {
-    "stencil-props": HTMLStencilPropsElement;
+    'stencil-props': HTMLStencilPropsElement;
   }
   interface ElementTagNameMap {
-    "stencil-props": HTMLStencilPropsElement;
+    'stencil-props': HTMLStencilPropsElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "stencil-props": JSXElements.StencilPropsAttributes;
+      'stencil-props': JSXElements.StencilPropsAttributes;
     }
   }
   namespace JSXElements {
     export interface StencilPropsAttributes extends HTMLAttributes {
-      passInvalid?: boolean;
-      showErrors?: boolean;
+      'component'?: string;
+      'componentProps'?: { [key: string]: any };
+      'showErrors'?: boolean;
     }
   }
 }

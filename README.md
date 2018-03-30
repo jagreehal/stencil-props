@@ -4,11 +4,17 @@
 
 A component that passes data attributes as props to [Stencil](https://stenciljs.com/) components.
 
-## Example
+## Example passing component inside stencil props useful for keeping classes etc. 
 
 ```html
 <stencil-props data-str='"abc"' data-num='1' data-obj='{"foo":"bar"}' data-arr='[1,2,3]' data-bool='true'>
-    <my-app/>
+    <my-app class="foo"></my-app>
+</stencil-props>
+```
+## Example passing component as a string
+
+```html
+<stencil-props component="my-app" data-str='"abc"' data-num='1' data-obj='{"foo":"bar"}' data-arr='[1,2,3]' data-bool='true'>    
 </stencil-props>
 ```
 
@@ -66,11 +72,3 @@ which outputs
 ```
 
 'show-errors' will log errors to the console
-
-###  pass-invalid (default: false)
-
-```jsx
-<stencil-props data-str='{y}' pass-invalid>
-```
-
-'pass-invalid' will pass values to component even if parsing fails
