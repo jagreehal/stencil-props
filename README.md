@@ -1,4 +1,4 @@
-[![NPM](https://nodei.co/npm/stencil-props.png?compact=true)](https://npmjs.org/package/stencil-props)
+[![NPM](https://nodei.co/npm/stencil-props.png?compact=true)](https://npmjs.org/package/stencil-props) [![Greenkeeper badge](https://badges.greenkeeper.io/jagreehal/stencil-props.svg)](https://greenkeeper.io/)
 
 # Stencil Props
 
